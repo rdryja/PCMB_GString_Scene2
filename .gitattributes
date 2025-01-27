@@ -1,2 +1,73 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+#include <FastLED.h>
+
+// Define the array of leds
+#define NUM_LEDS 300
+#define DATA_PIN D5
+CRGB leds[NUM_LEDS];
+
+
+void setup()
+
+{
+  FastLED.addLeds<WS2812, DATA_PIN, GRB>(leds, NUM_LEDS);
+  // FastLED.showColor(CRGB(255, 255, 255));
+  FastLED.setBrightness(5);
+}
+void loop() 
+
+{
+  for(int i=0;i<20;i++)
+  {
+    leds[i].setRGB(255,215,0);
+  }
+  for(int i=20;i<29;i++)
+  {
+    leds[i].setRGB(0,0,0);
+  }
+  for(int i=30;i<70;i++)
+  { 
+    leds[i].setRGB(255,215,0);
+  }
+  for(int i=70;i<79;i++)
+  {
+    leds[i].setRGB(0,0,0);
+  }
+  for(int i=80;i<120;i++)
+  {
+    leds[i].setRGB(255,215,0);
+  }
+  for(int i=120;i<129;i++)
+  {
+    leds[i].setRGB(0,0,0);
+  }
+  for(int i=130;i<170;i++)
+  {
+    leds[i].setRGB(255,215,0);
+  }
+  for(int i=170;i<179;i++)
+  {
+    leds[i].setRGB(0,0,0);
+  }
+  for(int i=180;i<220;i++)
+  {
+    leds[i].setRGB(255,215,0);
+  }
+  for(int i=220;i<229;i++)
+  {
+    leds[i].setRGB(0,0,0);
+  }
+  for(int i=230;i<270;i++)
+  {
+    leds[i].setRGB(255,215,0);
+  }
+  for(int i=270;i<279;i++)
+  {
+    leds[i].setRGB(0,0,0);
+  }
+  for(int i=280;i<299;i++)
+  {
+    leds[i].setRGB(255,215,0);  
+  }
+FastLED.show();  
+  
+}
